@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #808080;
+}
+
+#board {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#score-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2em;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.square {
+  height: 15px;
+  background: #ffffff;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3em;
+  color: #00e600;
+  padding: 20px;
+  font-family: 'Chewy', cursive;
+}
+
+.snake {
+  background-image: url('../images/medical.png');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.food {
+  background-image: url('../images/spliff.jpg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-gap: 0;
+    grid-row-gap: 0;
+}
+
+#confirm-start {
+  font-size: 0.5em;
+  padding-left: 20px;
+}
+
+[class*='col-'] {
+  display: grid;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
